@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai&family=Amiri&family=Aref+Ruqaa&family=Pacifico&family=Poppins:wght@400;900&display=swap');
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(114, 113, 113);
+  border-radius: 10px;
+  height: 200px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.category-btn:hover {
+  background-color: #FC1503 !important;
+  color: white !important;
+}
+
+.category-btn:hover span{
+  color: white !important;
+}
+
+.react-player {
+  height: 65vh !important;
+  width: 100% !important;
+}
+
+.search-bar{
+  border:none;
+  outline:none;
+  width:350px;
+}
+
+.category-btn{
+  font-weight: bold !important;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  cursor:pointer;
+  background: transparent;
+  outline: none;
+  border: none;
+
+  padding: 7px 15px;
+  margin: 10px 0px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 900px) {
+  .category-btn{
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width:800px){
+  .copyright{
+    display:none !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .scroll-horizontal {
+    overflow: auto !important;
+  }
+
+  .react-player {
+    height: 45vh !important;
+  }
+  .search-bar{
+    width:200px;
+  }
+}
+
+body{
+  background-color: var(--primaryColor);
+  color: var(--textColor);
+}
+button,input,textarea{
+  font-family: 'Poppins';
+}
+
+:root{
+  --primaryColor : #111330;
+  --secondaryColor : #ff3467;
+  --textColor : #fff;
+}
+
+/* NAV BAR */
+.navbar{
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: .5em 1em;
+  padding-top: 1em;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  background-color: var(--primaryColor);
+}
+.navbar a{
+  display: flex;
+  align-items: center;
+  margin-right: 120px;
+  margin-left: 10px;
+}
+.navbar a p{
+  color: var(--textColor);
+}
+.navbar img{
+  width: 50px;
+  margin-right: .5em;
+}
+.navbar .serach-bar{
+  display: flex;
+  align-items: center; 
+}
+.navbar .serach-bar input{
+  padding: .7em 1.5em;
+  padding-right: 3em;
+  border-radius: .5em;
+  outline: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  width: 400px;
+}
+.navbar .serach-bar svg{
+  position: relative;
+  margin-left: -1.3em;
+  color: #fff;
+}
+
+/* FEED */
+.feed{
+  display: flex;
+  width: 100%;
+  position: relative;
+  top: 70px;
+  /* background-color: gainsboro; */
+}
+.feed .side-bar{
+  display: flex;
+  flex-direction: column;
+  padding: 0 1em;
+  border-right: 2px solid rgba(255, 255, 255, 0.1);
+  width: 200px;
+  margin: 2em 0;
+  position: fixed;
+  height: 90vh;
+}
+.feed .side-bar button{
+  display: flex;
+  align-items: center;
+  margin: .7em 0;
+  border-radius: 2em 4em 2em 4em;
+  padding: .7em;
+  padding-left: 1em;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: .3s;
+  opacity: .3;
+}
+.feed .side-bar button span:first-child{
+  margin-right: 1em;
+  color: var(--textColor);
+}
+.feed .side-bar button:hover{
+  color: #fff;
+  background-color: rgb(53, 53, 53);
+}
+.feed .content{
+  width: 100%;
+  padding: 1em 2em;
+  margin-left: 240px;
+}
+.feed .content h3{
+  font-weight: normal;
+}
+.feed .content h3 span{
+  color: var(--secondaryColor);
+  margin-left: .3em;
+}
+.react-player {
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  border-radius: 1em;
+  overflow: hidden;
+}
+.animation{
+  color: #fff;
+    backdrop-filter: blur(2px);
+    background: #ffffff17;
+    text-align: center;
+    height: 160px;
+    position: absolute;
+    width: 290px;
+    border-radius: 1em;
+    visibility: hidden;
+}
+.animation div{
+  position: relative;
+  top: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.animation div span{
+  font-size: 30px;
+  animation: move 2s infinite linear;
+}
+@keyframes move {
+  0%{
+    transform: rotate(0);
+  }
+  
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.get-anim:hover .animation{
+  visibility: visible;
+}
